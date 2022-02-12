@@ -10,7 +10,11 @@
 
 @media (min-width: 900px) {
   .background {
-    color: #0d0d0d;
+    background-color: #171618;
+    /* background: url('./bk.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -18,7 +22,11 @@
 }
 
 .background {
-  color: #0d0d0d;
+  background-color: #171618;
+  /* background: url('./bk.png');
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center; */
   width: 100vw;
   height: 100vh;
 }
@@ -177,10 +185,6 @@
   float: right;
   width: 75%;
   padding: 10px;
-}
-
-.text-back {
-  background-color: #0000005e;
 }
 
 .text-input {

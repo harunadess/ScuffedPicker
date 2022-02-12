@@ -24,6 +24,7 @@ const App = () => {
     imgWidth = 200;
 
   const onClick = () => {
+    setChosen('- no item chosen -');
     const img = document.getElementById('img');
     if (img) {
       // stop
@@ -110,7 +111,7 @@ const Mobile: FC<Props> = (props) => {
         <div className='block'>
           <img className='image' id='img' src={img} alt="wheeeeee" width={imgWidth} height={imgWidth} />
         </div>
-        <div className='text-back'>
+        <div>
           <p className='bold'>{chosen}</p>
         </div>
         <div className='center'>
@@ -122,7 +123,7 @@ const Mobile: FC<Props> = (props) => {
         </div>
       </div>
       <div className='block'>
-        <div className='text-back'>
+        <div>
           <h4>Enter your options here:</h4>
         </div>
         <div className=''>
@@ -134,7 +135,7 @@ const Mobile: FC<Props> = (props) => {
             <button className='button-63' onClick={onClickClear}><span>Clear Items</span></button>
           </div>
         </div>
-        <div className='block text-back'>
+        <div className='block'>
           <div className='list-items'>
             <h4>Options:</h4>
             <ul>
