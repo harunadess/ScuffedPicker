@@ -10,10 +10,7 @@
 
 @media (min-width: 900px) {
   .background {
-    background: url('./sui.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: #0d0d0d;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -21,12 +18,9 @@
 }
 
 .background {
-  background: url('./sui.png');
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
+  color: #0d0d0d;
+  width: 100vw;
+  height: 100vh;
 }
 
 .container {
