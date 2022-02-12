@@ -1,23 +1,24 @@
 const express = require('express');
-const path = require('path');
-const { networkInterfaces } = require('os');
+const { join } = require('path');
+const config = require('./config.json');
 
+// set up express
 const app = express();
-const port = 3000;
 
-const interfaces = networkInterfaces();
-// todo: make this not shit, and actually find the first "active" one
-const defaultInterface = interfaces['eth0'].filter(eth => eth.family === 'IPv4')[0];
-
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(join(__dirname, 'build')));
 app.get('/', (_, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(join(__dirname, 'build', 'index.html'));
 });
 
+
+// set up server
 console.log(`${new Date()} serving content to:`);
-//app.listen(port, () => {
-//  console.log(`  -> http://localhost:${port}\t(locally)`);
-//});
-app.listen(port, defaultInterface.address, () => {
-  console.log(`  -> http://${defaultInterface.address}:${port}\t(on local network)`);
-});
+try {
+    app.listen(config.port, () => {
+      console.log(`-> ${config.hostname}`);
+      console.log(`-> localhost:${config.port}`);
+    });
+} catch(e) {
+    console.error('server crash:', e);
+    process.exit(1);
+}
