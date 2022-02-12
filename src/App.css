@@ -11,10 +11,6 @@
 @media (min-width: 900px) {
   .background {
     background-color: #171618;
-    /* background: url('./bk.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -23,10 +19,6 @@
 
 .background {
   background-color: #171618;
-  /* background: url('./bk.png');
-  background-size: cover;
-  background-repeat: repeat;
-  background-position: center; */
   width: 100vw;
   height: 100vh;
 }
